@@ -57,4 +57,14 @@ app.use(function(err, req, res, next) {
 });
 
 
+var http = require('http');
+app.set('port', 80);
+var server = http.createServer(app);
+server.listen(app.get('port'));
+console.log('server running'
++ 'port :' + app.get('port'));
+
+
+
+
 module.exports = app;
